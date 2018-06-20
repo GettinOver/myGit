@@ -11,39 +11,54 @@ namespace Wiederholung {
             char yn;
 
             Console.WriteLine("Dies Summe beträgt: " + dblSumme + " Wieviel Geld geben Sie?");
-            dblGegeben = Convert.ToDouble(Console.ReadLine());
+
+            try {                                                                                       //prüfen, ob der benutzer eine zahl eingegeben hat
+                dblGegeben = Convert.ToDouble(Console.ReadLine());
+            } catch {
+                Console.Clear();
+                Console.WriteLine("Bitte geben Sie eine Ganzzahl oder eine Dezimalzahl ein. Drücken Sie Enter, um zurück zu gelangen.");
+                Console.ReadLine();
+            }
+
             dblWenig = dblSumme - dblGegeben;
             dblWenig = System.Math.Round(dblWenig, 2);
 
             if (dblGegeben < dblSumme || dblGegeben > dblObergrenze) {
                 while (dblGegeben < dblSumme || dblGegeben > dblObergrenze) {
-                    if (dblGegeben < dblSumme) {
+                    if (dblGegeben < dblSumme) {                                                                //wenn gegeben zu wenig, zu viel
                         Console.Clear();
                         Console.WriteLine("Ihr Guthaben reicht nicht aus. Es fehlen noch " + dblWenig + " Euro");
                         Console.WriteLine("Wenn Sie einen neuen Betrag eingeben möchten, drücken Sie \"y\".");
                         yn = Convert.ToChar(Console.ReadLine());
                         Console.Clear();
-                        if (yn == 'y') {
+                        if (yn == 'y') {                                                                       //wenn neuer versuch
                             Console.WriteLine("Dies Summe beträgt: " + dblSumme + " Wieviel Geld geben Sie?");
-                            dblGegeben = Convert.ToDouble(Console.ReadLine());
+                            try {
+                                dblGegeben = Convert.ToDouble(Console.ReadLine());
+                            } catch {
+                                Console.Clear();
+                                Console.WriteLine("Bitte geben Sie eine Ganzzahl oder eine Dezimalzahl ein. Drücken Sie Enter, um zurück zu gelangen.");
+                                Console.ReadLine();
+                            }
+
                             dblWenig = dblSumme - dblGegeben;
                             dblWenig = System.Math.Round(dblWenig, 2);
-                            if (dblGegeben < dblSumme) {
+                            if (dblGegeben < dblSumme) {                                                       //wenn gegeben zu wenig
                                 Console.Clear();
                                 Console.WriteLine("Ihr Guthaben reicht nicht aus. Es fehlen noch " + dblWenig);
-                            } else if (dblGegeben > dblObergrenze) {
+                            } else if (dblGegeben > dblObergrenze) {                                          //wenn gegeben zu viel
                                 Console.Clear();
                                 Console.WriteLine("Die Obergrenze wurde überschritten. Einen solchen Betrag nehmen wir nicht an.");
-                            } else if (dblGegeben >= dblSumme && dblGegeben <= dblObergrenze) {
+                            } else if (dblGegeben >= dblSumme && dblGegeben <= dblObergrenze) {              //wenn gegeben genug und unter grenze
                                 dblRueckgeld = dblGegeben - dblSumme;
-                                dblRueckgeld = System.Math.Round(dblRueckgeld, 2);
+                                dblRueckgeld = System.Math.Round(dblRueckgeld, 2);                          //runden auf zwei nachkommastellen
                                 Console.Clear();
                                 Console.WriteLine("Summe: " + dblSumme + " Euro");
                                 Console.WriteLine("Gegeben: " + dblGegeben + " Euro");
                                 Console.WriteLine("Rückgeld: " + dblRueckgeld + " Euro");
                             }
                         }
-                    } else if (dblGegeben > dblObergrenze) {
+                    } else if (dblGegeben > dblObergrenze) {                                                //wenn gegeben zu viel
                         Console.Clear();
                         Console.WriteLine("Die Obergrenze wurde überschritten. Einen solchen Betrag nehmen wir nicht an.");
                         Console.WriteLine("Wenn Sie einen neuen Betrag eingeben möchten, drücken Sie \"y\".");
@@ -51,7 +66,14 @@ namespace Wiederholung {
                         Console.Clear();
                         if (yn == 'y') {
                             Console.WriteLine("Dies Summe beträgt: " + dblSumme + " Wieviel Geld geben Sie?");
-                            dblGegeben = Convert.ToDouble(Console.ReadLine());
+                            try {
+                                dblGegeben = Convert.ToDouble(Console.ReadLine());
+                            } catch {
+                                Console.Clear();
+                                Console.WriteLine("Bitte geben Sie eine Ganzzahl oder eine Dezimalzahl ein. Drücken Sie Enter, um zurück zu gelangen.");
+                                Console.ReadLine();
+                            }
+
                             dblWenig = dblSumme - dblGegeben;
                             dblWenig = System.Math.Round(dblWenig, 2);
                             if (dblGegeben < dblSumme) {
@@ -72,16 +94,10 @@ namespace Wiederholung {
                     }
                 }
             } else {
-                dblRueckgeld = dblGegeben - dblSumme;
+                dblRueckgeld = dblGegeben - dblSumme;                                           //wenn gegeben direkt genug und unter grenze
                 dblRueckgeld = System.Math.Round(dblRueckgeld, 2);
                 Console.Clear();
                 Console.WriteLine("Summe: " + dblSumme + " Euro");
                 Console.WriteLine("Gegeben: " + dblGegeben + " Euro");
                 Console.WriteLine("Rückgeld: " + dblRueckgeld + " Euro");
             }
-
-            Console.ReadLine();
-        }
-
-    }
-}
