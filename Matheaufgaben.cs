@@ -9,6 +9,7 @@ namespace Wiederholung {
         static void Main(string[] args) {
 			Random rdm = new Random();
 			int zahl1, zahl2, input, ergebnis = 0, count = 0, tryCount = 0;
+			bool gueltig;
 			char[] operators = { '+', '-', '*' };
 			DateTime startTime = DateTime.Now;
 			string longDateString = startTime.ToLongDateString();
@@ -26,15 +27,36 @@ namespace Wiederholung {
 					ergebnis = zahl1 * zahl2;
 				}
 
-				Console.Clear();
-				Console.WriteLine("Wie viel ist " + zahl1 + " " + rdmNbr + " " + zahl2 + "?");
-				input = Convert.ToInt16(Console.ReadLine());
+				do {
+					Console.Clear();
+					Console.WriteLine("Wie viel ist " + zahl1 + " " + rdmNbr + " " + zahl2 + "?");
+					gueltig = int.TryParse(Console.ReadLine(), out input);
+
+					if (!gueltig) {
+						Console.Clear();
+						Console.WriteLine("Bitte geben Sie eine Ganzzahl ein");
+						Console.ReadLine();
+					}
+
+				} while (!gueltig);
 
 				while (input != ergebnis) {
 					Console.Clear();
 					Console.WriteLine("Das Ergebnis ist falsch!");
-					Console.WriteLine("Wie viel ist " + zahl1 + " " + rdmNbr + " " + zahl2 + "?");
-					input = Convert.ToInt16(Console.ReadLine());
+					Console.ReadLine();
+					do {
+						Console.Clear();
+						Console.WriteLine("Wie viel ist " + zahl1 + " " + rdmNbr + " " + zahl2 + "?");
+						gueltig = int.TryParse(Console.ReadLine(), out input);
+
+						if (!gueltig) {
+							Console.Clear();
+							Console.WriteLine("Bitte geben Sie eine Ganzzahl ein");
+							Console.ReadLine();
+						}
+
+					} while (!gueltig);
+
 					tryCount++;
 				}
 				count++;
