@@ -1,0 +1,10 @@
+C:\Users\Adrian\source\repos\EM\EM\bin\Debug\EM.exe.config
+C:\Users\Adrian\source\repos\EM\EM\bin\Debug\EM.exe
+C:\Users\Adrian\source\repos\EM\EM\bin\Debug\EM.pdb
+C:\Users\Adrian\source\repos\EM\EM\obj\Debug\EM.csprojAssemblyReference.cache
+C:\Users\Adrian\source\repos\EM\EM\obj\Debug\EM.Form1.resources
+C:\Users\Adrian\source\repos\EM\EM\obj\Debug\EM.Properties.Resources.resources
+C:\Users\Adrian\source\repos\EM\EM\obj\Debug\EM.csproj.GenerateResource.cache
+C:\Users\Adrian\source\repos\EM\EM\obj\Debug\EM.csproj.CoreCompileInputs.cache
+C:\Users\Adrian\source\repos\EM\EM\obj\Debug\EM.exe
+C:\Users\Adrian\source\repos\EM\EM\obj\Debug\EM.pdb
