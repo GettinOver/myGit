@@ -1,0 +1,10 @@
+C:\Users\Adrian\source\repos\BMI-Rechner\BMI-Rechner\bin\Debug\BMI-Rechner.exe.config
+C:\Users\Adrian\source\repos\BMI-Rechner\BMI-Rechner\bin\Debug\BMI-Rechner.exe
+C:\Users\Adrian\source\repos\BMI-Rechner\BMI-Rechner\bin\Debug\BMI-Rechner.pdb
+C:\Users\Adrian\source\repos\BMI-Rechner\BMI-Rechner\obj\Debug\BMI-Rechner.csprojAssemblyReference.cache
+C:\Users\Adrian\source\repos\BMI-Rechner\BMI-Rechner\obj\Debug\BMI_Rechner.Form1.resources
+C:\Users\Adrian\source\repos\BMI-Rechner\BMI-Rechner\obj\Debug\BMI_Rechner.Properties.Resources.resources
+C:\Users\Adrian\source\repos\BMI-Rechner\BMI-Rechner\obj\Debug\BMI-Rechner.csproj.GenerateResource.cache
+C:\Users\Adrian\source\repos\BMI-Rechner\BMI-Rechner\obj\Debug\BMI-Rechner.csproj.CoreCompileInputs.cache
+C:\Users\Adrian\source\repos\BMI-Rechner\BMI-Rechner\obj\Debug\BMI-Rechner.exe
+C:\Users\Adrian\source\repos\BMI-Rechner\BMI-Rechner\obj\Debug\BMI-Rechner.pdb
