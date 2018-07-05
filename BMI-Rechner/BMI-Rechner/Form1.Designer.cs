@@ -115,9 +115,9 @@
 			this.lblBMI.AutoSize = true;
 			this.lblBMI.Location = new System.Drawing.Point(30, 56);
 			this.lblBMI.Name = "lblBMI";
-			this.lblBMI.Size = new System.Drawing.Size(26, 13);
+			this.lblBMI.Size = new System.Drawing.Size(10, 13);
 			this.lblBMI.TabIndex = 34;
-			this.lblBMI.Text = "BMI";
+			this.lblBMI.Text = ".";
 			// 
 			// gbDiag
 			// 
@@ -132,11 +132,11 @@
 			// lblDiag
 			// 
 			this.lblDiag.AutoSize = true;
-			this.lblDiag.Location = new System.Drawing.Point(6, 16);
+			this.lblDiag.Location = new System.Drawing.Point(48, 33);
 			this.lblDiag.Name = "lblDiag";
-			this.lblDiag.Size = new System.Drawing.Size(29, 13);
+			this.lblDiag.Size = new System.Drawing.Size(10, 13);
 			this.lblDiag.TabIndex = 0;
-			this.lblDiag.Text = "Diag";
+			this.lblDiag.Text = ".";
 			// 
 			// lblHeight1
 			// 
